@@ -1,0 +1,179 @@
+#main-title {
+    text-align: center;
+}
+
+.navbar a {
+    color: blue;
+}
+
+
+.container h2 {
+    font-size: 22px;
+}
+
+.highlight {
+    color: red;
+}
+
+header li {
+    font-size: 18px;
+}
+
+
+.service-list li:first-child {
+    text-align: center;
+}
+
+.review h3 {
+    color: green;
+}
+
+aside > h2 {
+    text-align: right;
+}
+
+.notice-list li:last-child {
+    color: orange;
+}
+
+.notice-list li:nth-child(2) {
+    font-size: 20px;
+}
+
+/* 11번 */ 
+/* 첫번째 클래스 리뷰를 찾고, 그 밑에 있는 자손 p를 찾음 */
+.review:first-of-type p {
+    color: purple;
+}
+
+/* 바로 밑에 있으므로 부등호 사용 */
+footer > a {
+    color: green;
+}
+
+
+/* 13번 */
+a[target=" blank"] {
+    text-align: center;
+}
+
+
+button {
+    font-size: 16px;
+}
+
+button:hover{
+    color: gray;
+}
+
+/* 16번 */
+/* 클래스 intro 다음에 오는 article */
+/* 형제 자매 선택됨 */
+.intro + article {
+    font-size: 24px;
+}
+
+section h2{
+    text-align: center;
+}
+
+.review:last-child{
+    color: pink;
+}
+
+.service-list li:nth-child(3) {
+    color: red;
+}
+
+nav li:last-child {
+    text-align: right;
+}
+
+article {
+    font-size: 20px;
+}
+
+aside li:first-child{
+    color: blue;
+}
+
+/* 바로 밑 자식이니까 > 사용 */
+header > h1 {
+    color: purple;
+}
+
+.services > ul {
+    text-align: left;
+}
+
+footer > p {
+    font-size: 12px;
+}
+
+/* 26번 */
+/* 우선순위(특정 위치를 지정한 선택자)
+때문에 위에 적은 코드가 적용되어 있음 */
+h3 {
+    color: blue;
+}
+
+.notice-list li:nth-child(2n+1) {
+    color: green;
+}
+
+.notice-list li:nth-child(2n) {
+    color: orange;
+}
+
+
+/* 자손 관계 */
+section p {
+    font-size: 16px;
+}
+
+article p:first-of-type {
+    color: red;
+}
+
+nav a:hover {
+    color: green;
+}
+
+button:hover {
+    font-size: 18px;
+}
+
+/* 33번 */
+/* 클래스 review 안 첫 번째를 먼저 지정 */
+.review:first-of-type h3 {
+    font-size: 24px;
+}
+
+/* 34번 */
+/* article:nth-child(1) {
+    color: purple;
+} */
+
+.service-list li:last-child {
+    font-size: 18px;
+}
+
+.intro > p {
+    color: green;
+}
+
+.services > h2 {
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: red;
+}
+
+.reviews div:last-child {
+    font-size: 22px;
+}
+
+.navbar li:first-child {
+    color: orange;
+}
