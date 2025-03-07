@@ -131,12 +131,15 @@ div.google_font > p.monoton-regular {
     border: 1px solid green;
 }
 
+/* 정수 단위 */
 .line_height .text1 {
     font-size: 20px;
     line-height: 40px;
     border: 1px solid red;
 }
 
+
+/* 배수 단위.. px와 같은 단위 미지정시 배수 처리 됨 */
 .line_height .text2 {
     font-size: 20px;
     line-height: 1.5;
