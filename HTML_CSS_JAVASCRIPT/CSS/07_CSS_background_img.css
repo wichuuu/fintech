@@ -17,6 +17,7 @@
     color: white;
 }
 
+/* rgba에서 a는 투명도 */
 .backgcolor div:nth-child(4) {
     background-color: rgba(0, 200, 50, 0.5);
     color: white;
@@ -31,16 +32,16 @@
     background: repeating-linear-gradient(
         45deg, 
         #f06,
-        #f06 10px,
+        rgb(45, 135, 153) 10px,
         #fff 10px,
-        #fff 20px
+        #e6e616 20px
     );
     color: black;
 }
 
-
+/* transparent 번짐 정도 (그라데이션) */
 .backgcolor div:nth-child(6) {
-    background: radial-gradient(#000 10%, transparent 10%);
+    background: radial-gradient(#000 20%, transparent 50%);
     background-size: 20px, 20px;
     color: black;
 }
