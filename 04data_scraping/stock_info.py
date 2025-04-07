@@ -2,6 +2,7 @@ import os
 import requests
 import time
 import pandas as pd
+from datetime import datetime
 from bs4 import BeautifulSoup as bs
 from sqlalchemy import create_engine, text
 import pymysql
@@ -43,19 +44,19 @@ while True:
         # 대표자명
         ceo = tr.select_one("td:nth-child(6)").text
         # 홈페이지
-        homepage = tr.select_one("td:nth-child(7) > a")['href'] if tr.select_one("td:nth-child(7) > a") != None else ""
+        hompage = tr.select_one("td:nth-child(7) > a")['href'] if tr.select_one("td:nth-child(7) > a") != None else ""
         # 지역
         region = tr.select_one("td:nth-child(8)").text
 
         company_infos.append((stock_type, company_name, stock_code, business_type, product,
-                             resi_date, settlement, ceo, homepage, region))
+                             resi_date, settlement, ceo, hompage, region))
     
     if page < total_page:
         page+= 1
     else:
         break
     
-
+#컬럼명
 columns = soup.select_one("table")["summary"].split(", ")
 columns.insert(0, "주식종목")
 columns.insert(2, "종목코드")
@@ -72,8 +73,8 @@ if not os.path.exists("./scraping_results"):
     
 
 
-df.to_csv("./scraping_results/상장기업정보_{today}기준.csv", encoding="utf-8", index=False)
-
+df.to_csv(f"./scraping_results/상장기업정보_{today}기준.csv", encoding="utf-8", index=False)
+print(f"./scraping_results/상장기업정보_{today}기준.csv 저장완료!")
 
 
 #* sqlalchemy의 create_engine을 이용해서 mysql 서버에 접속
@@ -85,4 +86,5 @@ conn = engine.connect()
 # 데이터프레임을 DB에 저장하기
 # 데이터프레임명.to_sql("테이블명")
 df.to_sql(f"stock_company_info_{today}", con=conn, if_exists='replace', index=False)
+print(f"stock_company_info_{today} 데이터베이스 저장완료!")
 conn.close()
