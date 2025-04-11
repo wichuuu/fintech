@@ -18,14 +18,15 @@ while True:
                    orderMode=3, orderStat="D", searchType=13, 
                    fiscalYearEnd="all",  location="all")
     r = requests.post(url, data = payload)
-#     print(r.status_code)
+    # print(r.status_code)
     soup = bs(r.content, 'lxml')
     time.sleep(5)
 
     # 전체페이지
     total_page = int(soup.select_one(".info.type-00 > em").text.replace(",", "")) // 100 + 1
-
+    print(total_page)
     for idx, tr in enumerate(soup.select("tbdoy > tr")):
+        print(idx, tr)
         print(f"{page}/{total_page}중, {idx}/{len(soup.select('tbody > tr'))} 작업 중", end="\r")
         # 주식종목
         stock_type = tr.select_one("td:nth-child(1) > img")['alt']
@@ -50,7 +51,7 @@ while True:
 
         company_infos.append((stock_type, company_name, stock_code, business_type, product,
                              resi_date, settlement, ceo, hompage, region))
-    
+    print("반복문 돌았?")
     if page < total_page:
         page+= 1
     else:

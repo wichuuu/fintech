@@ -11,7 +11,8 @@ def dbconnect():
     return conn
 
 def to_ex_db(df):
+
     time.sleep(1)
     conn = dbconnect()
-    df.to_sql(f'exchange_rate', con=conn, if_exists="append", index=False)
+    df.to_sql(f'exchange_rate_today', con=conn, if_exists="append", index=False)
     conn.close()
