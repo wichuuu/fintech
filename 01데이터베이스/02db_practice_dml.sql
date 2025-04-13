@@ -1,10 +1,12 @@
 #데이터베이스, 테이블 만들기
 create database sampleDB;
+#데이터베이스 삭제
 drop database sampledb;
 
 #데이터베이스 조회하기
 show databases;
 
+#데이터베이스 사용
 use sampledb;
 
 #테이블 만들기

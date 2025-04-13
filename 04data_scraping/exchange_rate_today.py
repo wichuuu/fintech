@@ -17,20 +17,20 @@ def new_col(df):
     new_cols = []
     for col in df.columns:
         if col[0] == col[1] == col[2]:
-            new_cols.append(col[0].replace(" ", "_"))
+            new_cols.append(col[0].strip().replace(" ", "_"))
         else:
             new_cols.append(" ".join(col).strip().replace(" ", "_"))
     return new_cols
 
 
 options = Options()
-# options.add_experimental_option("detach", True)
+options.add_experimental_option("detach", True)
 # options.add_argument("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36")
 options.add_argument("start-maximized")
 options.add_argument("Chrome/134.0.0.0")
 options.add_argument("lang=ko_KR")
 options.add_argument("--headless")
-options.add_argument("--disable-gpu")
+options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--no-sandbox")
 
 
