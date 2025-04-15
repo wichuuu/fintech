@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 import pymysql
 pymysql.install_as_MySQLdb()
 import pandas as pd
-from datetime import datetime
+# from datetime import datetime
 import time
 
 def dbconnect():
@@ -12,7 +12,7 @@ def dbconnect():
 
 def to_bank_db(bank, df):
     """
-    google play 은행 앱 리뷰를 DB에 저장하는 함수수
+    google play 은행 앱 리뷰를 DB에 저장하는 함수
     """
 
     #데이터베이스 쿼리창 오픈
