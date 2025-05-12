@@ -1,0 +1,54 @@
+h1 {
+    font-weight: bold;
+    color: #bc8585;
+}
+
+.letsgo p > span{
+    font-weight: bold;
+    color: red;
+    font-size: large;
+}
+
+.intro > p.gasoek {
+        font-family: "Gasoek One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: x-large;
+}
+
+.intro article p:nth-child(1) {
+    font-weight:bolder;
+    color: #f468a7;
+}
+
+.intro article p:nth-child(2) {
+    font-weight: bolder;
+    color: #920e49;
+}
+
+.intro article p:nth-child(3) {
+    font-weight: bolder;
+    color: #920e7c;
+}
+
+.point > h2{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.point h2 > span {
+    font-size: xx-large;
+    font-weight: bold;
+    color: blue;
+}
+
+.point li {
+    color: black;
+}
+
+
+.last > p.me {
+    font-family: "Gasoek One", sans-serif;
+    font-weight:lighter;
+    color: #a35336;
+}
